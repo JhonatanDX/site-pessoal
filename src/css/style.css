@@ -1,0 +1,286 @@
+/* Estilização do Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: var(--cor-background);
+}
+
+header .logo {
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+    cursor: default;
+}
+
+header .navigation {
+    margin-left: -200px;
+}
+
+header .navigation a {
+    font-size: 1.4rem;
+    color: var(--cor-secundaria);
+    margin-right: 40px;
+    font-weight: 500;
+}
+
+header .navigation a:hover {
+    color: var(--cor-primaria);
+    transition: 0.3s;
+}
+
+span {
+    color: var(--cor-primaria);
+}
+
+.button {
+    color: var(--cor-terciaria);
+    padding: 8px 35px;
+    background-color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.button:hover {
+    color: var(--cor-primaria);
+    background-color: transparent;
+}
+
+/* Estilização da section home */
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../images/first-img.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+.home .content {
+    max-width: 500px;
+    color: var(--cor-secundaria);
+}
+
+.home .content p {
+    font-size: 1.4rem;
+    padding: 10px 0 40px 0;
+}
+
+.home .content h2 {
+    font-size: 3rem;
+}
+
+.home .content h2 span {
+    color: var(--cor-primaria);
+}
+
+.home .content h4 {
+    font-size: 2rem;
+}
+
+.home .content .button-group .button:nth-child(2) {
+    color: var(--cor-primaria);
+    background: transparent;
+    margin-left: 30px;
+    padding: 10px 30px;
+}
+
+.home .content .button-group .button:hover:nth-child(2) {
+    color: var(--cor-terciaria);
+    background: var(--cor-primaria);
+}
+
+.home .content .social-icons {
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 50px;
+}
+
+.home .content .social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: var(--cor-primaria);
+    border-radius: 50%;
+    margin-right: 22px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid var(--cor-terciaria);
+    outline: 2px solid var(--cor-primaria);
+    transition: 0.3s;
+}
+
+.home .content .social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.home .content .social-icons a i {
+    color: var(--cor-terciaria);
+}
+
+/* Estilização da section about */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh + 101px);
+    background: var(--cor-background);
+    padding-bottom: 60px;
+    color: var(--cor-secundaria);
+}
+
+.heading {
+    font-size: 5rem;
+    margin: 30px 0 30px 0;
+    text-align: center;
+}
+
+.about-img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 90%;
+    border-radius: 50%;
+    border-left: 2px solid var(--cor-primaria);
+    border-right: 2px solid var(--cor-primaria);
+    border-top: 2px solid var(--cor-background);
+    border-bottom: 2px solid var(--cor-background);
+}
+
+.about-img .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-left: 2px solid var(--cor-background);
+    border-right: 2px solid var(--cor-background);
+    border-top: 2px solid var(--cor-primaria);
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+.about-content {
+    text-align: justify;
+}
+
+.about-content h3 {
+    text-align: center;
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 20px 0 30px 0;
+    max-width: 1100px;
+}
+
+/* Estilização da section Skills */
+
+.skills {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh + 101px);
+    padding-bottom: 70px;
+    background: var(--cor-background);
+    color: var(--cor-secundaria);
+}
+
+.skills .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.skills .skills-row .skills-conlunm {
+    flex: 1 1 400px;
+}
+
+.skills-collumn .title {
+    font-size: 25px;
+    margin: 0 0 15px;
+}
+
+.skills-box .skills-content {
+    min-width: 450px;
+    position: relative;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 6px;
+    padding: 5px 15px;
+}
+
+.skills-content .progress {
+    padding: 10px 0;
+}
+
+.skills-content .progress h3 {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bxl-javascript {
+    color: #f7df1e;
+    font-size: 25px;
+}
+
+.bxl-react {
+    color: #61dafb;
+    font-size: 25px;
+}
+
+.bx-code-curly {
+    color: #99425b;
+    font-size: 25px;
+}
+
+.bxl-bootstrap {
+    color: #563d7c;
+    font-size: 25px;
+}
+
+.bxl-html5 {
+    color: #e34f26;
+    font-size: 25px;
+}
+
+.bxl-css3 {
+    color: #264de4;
+    font-size: 25px;
+}
+
+.bxl-git {
+    color: #f05032;
+    font-size: 25px;
+}
+
+.bxl-github {
+    color: #181717;
+    font-size: 25px;
+}
