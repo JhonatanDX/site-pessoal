@@ -48,6 +48,7 @@ span {
     font-size: 1.4rem;
     font-weight: 500;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -106,30 +107,33 @@ span {
 }
 
 .home .content .social-icons {
-    font-size: 1.4rem;
     position: absolute;
     bottom: 50px;
 }
 
-.home .content .social-icons a {
+.social-icons {
+    display: flex;
+    font-size: 2.6rem;
+    gap: 20px;
+}
+
+.social-icons a {
     display: inline-block;
     width: 35px;
     height: 35px;
     background: var(--cor-primaria);
     border-radius: 50%;
-    margin-right: 22px;
     text-align: center;
-    line-height: 35px;
     border: 1px solid var(--cor-terciaria);
     outline: 2px solid var(--cor-primaria);
     transition: 0.3s;
 }
 
-.home .content .social-icons a:hover {
+.social-icons a:hover {
     transform: translateY(-5px);
 }
 
-.home .content .social-icons a i {
+.social-icons a i {
     color: var(--cor-terciaria);
 }
 
@@ -149,7 +153,7 @@ span {
 
 .heading {
     font-size: 5rem;
-    margin: 30px 0 30px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
@@ -207,12 +211,16 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 100%;
     height: calc(100vh + 100px);
     background: var(--cor-background);
     padding-bottom: 60px;
     color: var(--cor-secundaria);
+}
+
+.skills p {
+    max-width: 1100px;
+    font-size: 1.6rem;
 }
 
 .skills .skills-row {
@@ -239,17 +247,24 @@ span {
     border: 2px solid var(--cor-primaria);
     border-radius: 6px;
     padding: 5px 15px;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.skills-content .progress {
-    padding: 10px 0;
-
+.skills-box .skills-content::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--cor-terciaria);
+    z-index: -1;
+    transition: 0.5s;
 }
 
-.skills-content .progress h3 {
-    font-size: 1.7rem;
-    display: flex;
-    justify-content: space-between;
+.skills-box .skills-content:hover::before {
+    width: 100%;
 }
 
 .bxl-javascript {
@@ -288,8 +303,20 @@ span {
 }
 
 .progress h3 .bxl-github {
-    color: #181717;
+    color: #fff;
     font-size: 25px;
+}
+
+.skills-content .progress {
+    padding: 10px 0;
+
+}
+
+.skills-content .progress h3 {
+    font-size: 1.7rem;
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
 }
 
 .skills-content .progress h3 span {
@@ -326,7 +353,98 @@ span {
     width: 70%;
 }
 
-.skills p {
-    max-width: 1100px;
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh + 100px);
+    padding-bottom: 60px;
+    background: var(--cor-background);
+    color: var(--cor-secundaria);
+}
+
+.contact form {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field {
+    position: relative;
+    width: 49%;
+    margin: 8px 0;
+    z-index: 1;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
     font-size: 1.6rem;
+    color: var(--cor-secundaria);
+    background: transparent;
+    border-radius: 6px;
+    border: 2px solid var(--cor-primaria);
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+    color: var(--cor-secundaria);
+}
+
+.contact form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--cor-terciaria);
+    border-radius: 6px;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea:valid~.focus {
+    width: 100%;
+}
+
+.contact form .textarea-field {
+    position: relative;
+    margin: 8px 0 27px 0;
+    display: flex;
+    z-index: 1;
+}
+
+.contact form .textarea-field textarea {
+    resize: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cor-background);
+    color: var(--cor-secundaria);
+    font-size: 1.2rem;
+}
+
+.footer .footer-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    padding: 20px 40px;
 }
