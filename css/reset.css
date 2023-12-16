@@ -2,9 +2,9 @@
 
 :root {
     --cor-primaria: #7d2;
-    --cor-secundaria: #fff;
-    --cor-terciaria: #0d0f0f;
-    --cor-background: #000;
+    --cor-secundaria: black;
+    --cor-terciaria: white;
+    --cor-background: #F2F0D5;
   }
 
 * {

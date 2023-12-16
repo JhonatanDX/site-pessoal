@@ -1,6 +1,6 @@
 /* Estilização do Header */
 
-header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -10,12 +10,29 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background: var(--cor-background);
+    transition: 0.5s;
+    color: var(--cor-secundaria);
+}
+
+.header.onscroll {
+    background-color: var(--cor-secundaria);
+}
+
+.header.onscroll .navigation a {
+    color: var(--cor-terciaria);
+}
+
+.header.onscroll .navigation a:hover {
+    color: var(--cor-primaria);
+    transition: 0.3s;
+}
+
+.header.onscroll .logo {
+    color: var(--cor-terciaria);
 }
 
 header .logo {
     font-size: 2rem;
-    color: var(--cor-secundaria);
     cursor: default;
 }
 
@@ -25,9 +42,9 @@ header .navigation {
 
 header .navigation a {
     font-size: 1.4rem;
-    color: var(--cor-secundaria);
     margin-right: 40px;
     font-weight: 500;
+    color: var(--cor-secundaria);
 }
 
 header .navigation a:hover {
@@ -142,18 +159,16 @@ span {
 .about {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(100vh + 100px);
+    height: 100vh;
     background: var(--cor-background);
-    padding-bottom: 60px;
     color: var(--cor-secundaria);
 }
 
 .heading {
     font-size: 5rem;
-    padding: 30px 0;
+    margin: 100px 0 20px 0;
     text-align: center;
 }
 
@@ -210,11 +225,9 @@ span {
 .skills {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
     height: calc(100vh + 100px);
     background: var(--cor-background);
-    padding-bottom: 60px;
     color: var(--cor-secundaria);
 }
 
@@ -353,10 +366,61 @@ span {
     width: 70%;
 }
 
+/* Estilização da section portifolio */
+
+.portifolio-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh + 100px);
+    background: var(--cor-background);
+    color: var(--cor-secundaria);
+}
+
+.portifolio-section h2 span {
+    color: var(--cor-primaria);
+}
+
+.portifolio-section .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(119, 221, 34, 0.5);
+    text-align: center;
+    width: 200px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: white;
+    padding-top: 5px;
+}
+
+.text-card p {
+    font-size: 16px;
+    color: var(--cor-secundaria);
+    text-align: center;
+    margin: 5px 5px;
+}
+
+.text-card h3 {
+    font-size: 26px;
+    color: var(--cor-primaria);
+    text-align: center;
+    padding: 5px;
+}
+
+/* Estilização da section contact */
+
 .contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
     height: calc(100vh + 100px);
     padding-bottom: 60px;
@@ -431,6 +495,8 @@ span {
     resize: none;
 }
 
+/* Estilização do footer */
+
 .footer {
     display: flex;
     justify-content: center;
@@ -445,6 +511,5 @@ span {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 100px;
-    padding: 20px 40px;
+    padding: 30px 100px;
 }
